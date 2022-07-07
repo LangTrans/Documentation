@@ -1,6 +1,6 @@
 # Implementation
 
-To customize you should extract tokens with regular expression. Then you should create the template of original language with token you extracted.
+To customize your syntax, you should extract tokens using regular expressions. You should then create the template of the original language using the tokens you extracted.
 
 ## Token Extraction
 
@@ -108,7 +108,7 @@ To add content in each line.
 {% tab title="replace " %}
 Regular expression to match and replace or delete any unwanted content in token.
 
-To replace add a list with first item as regular expression to unwanted content and second item is the content you wanted to replace with.
+To replace unwanted content, add a list with the first item as a regular expression and the second item as the content you want to replace with.
 
 To delete add a list with regular expression only
 {% endtab %}
