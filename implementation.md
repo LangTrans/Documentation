@@ -54,13 +54,13 @@ settings:
 
 Name of syntax you wanted to match
 
-**Eg. **arithmetic, loop etc.
+**Eg.** arithmetic, loop etc.
 
 If one type have same pattern but different regular expression to match.&#x20;
 
 You can write `_<any character><typeofsyntax>` for next regex.
 
-**Eg. **`_1typeofsyntax`
+**Eg.** `_1typeofsyntax`
 
 Both regex use one template
 
@@ -70,9 +70,8 @@ Place where regular expression to match block of code..
 
 Regular expression for tokens must be inside brackets.
 
-{% hint style="info" %}
-&#x20;`~` acts like `s*`in regular expression
-{% endhint %}
+> &#x20;`~` acts like `s*` in regular expression
+
 
 #### **tokens**
 
@@ -94,65 +93,50 @@ If it is True it works only once
 
 To pass converted syntax into another or same typeofsyntax
 
-**token1**
+### **token1**
 
 To modify token1 matched
 
-{% tabs %}
-{% tab title="eachline" %}
-To add content in each line.
+> To add content in each line.
 
+**eachline**  
 `<line>` represents original content in eachline. It loops through every line.
-{% endtab %}
 
-{% tab title="replace " %}
-Regular expression to match and replace or delete any unwanted content in token.
+**replace**  
+Regular expression to match and replace or delete any unwanted content in token.  
+To replace add a list with first item as regular expression to unwanted content and second item is the content you wanted to replace with.  
+To delete add a list with regular expression only  
 
-To replace add a list with first item as regular expression to unwanted content and second item is the content you wanted to replace with.
+**call**  
+To pass transformed to another typeofsyntax  
+Write names of typeofsyntax inside array to call.  
+Passes from left to right  
 
-To delete add a list with regular expression only
-{% endtab %}
-
-{% tab title="call" %}
-To pass transformed to another typeofsyntax
-
-Write names of typeofsyntax inside array to call.
-
-Passes from left to right
-
-&#x20;
-{% endtab %}
-{% endtabs %}
-
-#### settings block
+#### **settings block**
 
 For setting variables, collections, after command
 
-{% tabs %}
-{% tab title="variables" %}
-You can make variables than can used inside [regular expression](implementation.md#regex) by `<varname>`
-{% endtab %}
 
-{% tab title="varfile" %}
+> **variables**  
+You can make variables than can used inside **regular expression** by `<varname>`
+
+
+> **varfile**  
 Name of YAML file to import variables
 
-{% hint style="info" %}
-Filename doesn't need extension (base name only)
-{% endhint %}
-{% endtab %}
+> **info**  
+Filename doesn't need extension (base name only)  
 
-{% tab title="collections" %}
-Group of [typeofsyntax](implementation.md#typeofsyntax)s
-
-It can be used in call and next
-
+> **collections**  
+Group of [typeofsyntax]s  
+It can be used in call and next    
 **Eg.** `$collection_name`
-{% endtab %}
 
-{% tab title="after" %}
+
+> **after**  
 To run command line commands after translation.
 
-**Example **
+## **Example**
 
 ```yaml
 after: "black $target"
@@ -161,18 +145,15 @@ after: "black $target"
 * $target - Location of translated file
 * $source - Location of source file
 * $current - Location of program
-{% endtab %}
 
-{% tab title="errfile" %}
-YAML file with error definitions for [linting](implementation.md#linting)
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
-__[_regex_ ](implementation.md#regex)and [_tokens_ ](implementation.md#tokens)should be in all typeofsyntax.&#x20;
+> **errfile**
+YAML file with error definitions for **linting**
 
-Others are optional
-{% endhint %}
+
+> **info**
+> _regex_ _tokens_ should be in all typeofsyntax.  
+Others are optional  
 
 ### Example
 
@@ -195,7 +176,7 @@ Template of syntax of target language
 typeofsyntax: "syntax1 <token1> middle syntax <token2> syntax3 <token3>"
 ```
 
-**typeofsyntax **- Name of [typeofsyntax ](implementation.md#typeofsyntax)in [token extraction](implementation.md#token-extraction) file.&#x20;
+**typeofsyntax**- Name of [typeofsyntax ](implementation.md#typeofsyntax)in [token extraction](implementation.md#token-extraction) file.
 
 **token1,token2,token3** - Represents [tokens](implementation.md#tokens) extracted with regular expression in [token extraction file](implementation.md#token-extraction).
 
@@ -251,13 +232,11 @@ Block name is  name of [typeofsyntax ](implementation.md#typeofsyntax)in [token 
 
 #### **Outside Block**
 
-To match error regex in whole source code.&#x20;
+To match error regex in whole source code.
 
-{% hint style="info" %}
-For errors related to a typeofsyntax, outside block should be inside [typeofsyntax block](implementation.md#typeofsyntax-block).
+> For errors related to a typeofsyntax, outside block should be inside [typeofsyntax block](implementation.md#typeofsyntax-block).  
+> For errors not related to any typeofsyntax, outside block should be used outside block
 
-For errors not related to any typeofsyntax, outside block should be used outside block
-{% endhint %}
 
 #### **NameofError**
 
@@ -294,6 +273,6 @@ outside:
         msg: No Multiline
 ```
 
-{% hint style="info" %}
-You can share your syntax in [LangTrans Repos](https://langtrans.github.io/langtransrepos/)
-{% endhint %}
+
+> You can share your syntax in [LangTrans Repos](https://langtrans.github.io/langtransrepos/)
+
