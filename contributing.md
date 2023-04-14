@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-Welcome to LangTrans an open source project that enables you to transpile your own syntax to any programming language! We are glad you are interested in contributing.
+Welcome to [LangTrans](https://github.com/LangTrans/LangTrans.git) an open source project that enables you to transpile your own syntax to any programming language! We are glad you are interested in contributing.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ To get started, follow these steps:
 
 ## Good First Issues
 
-These issues are always open and we are always happy to get new suggestions and/or improvements for our code and docs:
+These issues are always open and we are always happy to get new suggestions and/or improvements for our [code](https://github.com/LangTrans/LangTrans.git) and [docs](https://github.com/LangTrans/Docs.git):
 
 - [Built-in regular expressions](https://github.com/LangTrans/LangTrans/issues/8#issue-846578138)
 - [Any Suggestions](https://github.com/LangTrans/LangTrans/issues/7#issue-823890512)
