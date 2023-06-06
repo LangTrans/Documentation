@@ -6,15 +6,15 @@
 py langtrans.py <SoureFileName> <OutputFileName> <SyntaxRepr> <PatternRepr>
 ```
 
-**SourceFileName** - File name of source code written with new syntax
+**SourceFileName** - Name of the file with source code to transpile
 
-**OutputFileName** - File name of source code you want to generate with original syntax
+**OutputFileName** - Name of the file to output to
 
-**SyntaxRepr** - File name of YAML file for [token extraction](implementation.md#token-extraction) without extension(.yaml)
+**SyntaxRepr** - File name of YAML file with [definition of tokens](implementation.md#token-extraction) (without .yaml extension)
 
-**PatternRepr** - File name of YAML file with [template](implementation.md#template) of original language without extension
+**PatternRepr** - File name of YAML file with [template](implementation.md#template) of original language (without .yaml extension)
 
-### **Compile**
+### **To Compile**
 
 ```bash
 py langtrans.py -c <SyntaxRepr> <PatternRepr> <compfile>
@@ -22,11 +22,9 @@ py langtrans.py -c <SyntaxRepr> <PatternRepr> <compfile>
 
 **compfile**
 
-Name of compiled file(without extension)
+Name of output file (without extension); compiles and generates `filename.ltz`.
 
-`filename.ltz` will be generated.
-
-### **Run**
+### **To Run**
 
 ```bash
 py langtrans.py -f <SoureFileName> <OutputFileName> <compfile>
@@ -41,7 +39,7 @@ py langtrans.py -f <SoureFileName> <OutputFileName> <compfile>
 
 ### **Docs for token extraction file**
 
-To generate documentation for [token extraction](implementation.md#syntax) file
+To generate documentation for [definition of tokens](implementation.md#syntax) file, run:
 
 ```bash
 py langtrans.py -d <SyntaxRepr> > filename.txt
