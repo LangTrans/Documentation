@@ -1,6 +1,6 @@
 # Implementation
 
-To customize you should extract tokens with regular expression. Then you should create the template of original language with token you extracted.
+To customize, you define tokens for your new syntax using regular expressions. Then you create the template of the original language by referencing the tokens you defined.
 
 ## Token Extraction
 
@@ -26,10 +26,9 @@ typeofsynax:
 _1typeofsyntax:
     regex: regex2
     tokens: [token1,token2,token3]
-#Code here(like above)
+# More lines of code
 #...................
-#...................
-#...................
+
 settings:
     collections:
         collection_name: [typeofsyntax1,typeofsyntax2]
@@ -54,13 +53,13 @@ settings:
 
 Name of syntax you wanted to match
 
-**Eg. **arithmetic, loop etc.
+**Eg.** arithmetic, loop etc.
 
 If one type have same pattern but different regular expression to match.&#x20;
 
 You can write `_<any character><typeofsyntax>` for next regex.
 
-**Eg. **`_1typeofsyntax`
+**Eg.** `_1typeofsyntax`
 
 Both regex use one template
 
@@ -90,11 +89,11 @@ If it is False it works only after calling it otherwise it works normally.
 
 If it is True it works only once
 
-**next**
+#### **next**
 
 To pass converted syntax into another or same typeofsyntax
 
-**token1**
+#### **token1**
 
 To modify token1 matched
 
@@ -130,11 +129,11 @@ For setting variables, collections, after command
 
 {% tabs %}
 {% tab title="variables" %}
-You can make variables than can used inside [regular expression](implementation.md#regex) by `<varname>`
+You can make variables than can be used inside [regular expressions](implementation.md#regex) by `<varname>`
 {% endtab %}
 
 {% tab title="varfile" %}
-Name of YAML file to import variables
+Name of YAML file that defines variables
 
 {% hint style="info" %}
 Filename doesn't need extension (base name only)
@@ -169,9 +168,9 @@ YAML file with error definitions for [linting](implementation.md#linting)
 {% endtabs %}
 
 {% hint style="info" %}
-__[_regex_ ](implementation.md#regex)and [_tokens_ ](implementation.md#tokens)should be in all typeofsyntax.&#x20;
+[_regex_ ](implementation.md#regex)and [_tokens_ ](implementation.md#tokens)should be in all typeofsyntax.&#x20;
 
-Others are optional
+Other options are optional.
 {% endhint %}
 
 ### Example
