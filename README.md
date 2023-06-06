@@ -6,13 +6,10 @@ Description: Customize Programming Languages
 
 LangTrans customizes any programming language. You can make your own syntax for any programming language.
 
-## How it works?
+## How does it work?
 
-LangTrans converts your syntax into the original syntax.&#x20;
+LangTrans transpiles your syntax into the original syntax.&#x20;
 
-Regular expressions extract tokens from your language. You should make a template of the original language syntax.&#x20;
+You define tokens from your language, and a template of the original language's syntax, using regular expressions.&#x20;
 
-LangTrans takes both as input and converts code written in the new syntax to the original syntax.
-
-
-
+LangTrans takes both definitions as input and converts code written in the new syntax to the original syntax.
