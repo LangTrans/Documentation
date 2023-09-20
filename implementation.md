@@ -1,6 +1,10 @@
 # Implementation
 
-To customize you should extract tokens with regular expression. Then you should create the template of original language with token you extracted.
+Steps Involved:
+
+Token extraction
+Syntax template creation
+Error linting
 
 ## Token Extraction
 
@@ -297,3 +301,4 @@ outside:
 {% hint style="info" %}
 You can share your syntax in [LangTrans Repos](https://langtrans.github.io/langtransrepos/)
 {% endhint %}
+
