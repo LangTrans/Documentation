@@ -6,9 +6,9 @@
 py langtrans.py <SoureFileName> <OutputFileName> <SyntaxRepr> <PatternRepr>
 ```
 
-**SourceFileName** - File name of source code written with new syntax
+**SourceFileName** - File name of the source code written with new syntax
 
-**OutputFileName** - File name of source code you want to generate with original syntax
+**OutputFileName** - File name of the source code you want to generate with original syntax
 
 **SyntaxRepr** - File name of YAML file for [token extraction](implementation.md#token-extraction) without extension(.yaml)
 
@@ -22,7 +22,7 @@ py langtrans.py -c <SyntaxRepr> <PatternRepr> <compfile>
 
 **compfile**
 
-Name of compiled file(without extension)
+Name of the compiled file(without extension)
 
 `filename.ltz` will be generated.
 
